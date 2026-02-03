@@ -1,0 +1,42 @@
+# Visual Studio / VS Code
+.vs/
+*.sln.*
+*.user
+*.suo
+*.userosscache
+*.slnx
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa]rchive/
+[Aa]rchives/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# NuGet Packages
+*.nupkg
+# NuGet Symbol Packages
+*.snupkg
+
+# User-specific files
+*.rsuser
+*.scc
+*.swp
+*.tss
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
