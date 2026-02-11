@@ -1,4 +1,5 @@
-
+//using ECommerce.SharedLibirary.DependencyInjection;
+using ProductApi.Infrastructure.DependencyInjection;
 namespace ProductApi.Presentation
 {
     public class Program
@@ -11,14 +12,24 @@ namespace ProductApi.Presentation
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-            builder.Services.AddOpenApi();
+            builder.Services.AddSwaggerGen();
+            //builder.Services.AddOpenApi();
+
+            #region register shared services
+            builder.Services.AddInfrastructure(builder.Configuration);
+            #endregion
+
 
             var app = builder.Build();
+
+            app.UseInfrastructurePolicy();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
-                app.MapOpenApi();
+                app.UseSwagger();
+                app.UseSwaggerUI();
+                //app.MapOpenApi();
             }
 
             app.UseHttpsRedirection();

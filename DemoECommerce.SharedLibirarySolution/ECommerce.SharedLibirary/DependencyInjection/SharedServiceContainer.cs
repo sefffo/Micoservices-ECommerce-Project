@@ -51,7 +51,7 @@ namespace ECommerce.SharedLibirary.DependencyInjection
         public static IApplicationBuilder UseSharedPolicies(this IApplicationBuilder app)
         {
             app.UseMiddleware<MiddleWares.GlobalException>();
-            app.UseMiddleware<MiddleWares.ListenToOnlyApiGateway>();//to block outside requests except from api gateway
+            //app.UseMiddleware<MiddleWares.ListenToOnlyApiGateway>();//to block outside requests except from api gateway
             app.UseAuthentication();
             app.UseAuthorization();
             return app;
