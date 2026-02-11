@@ -10,7 +10,7 @@ namespace ECommerce.SharedLibirary.Interface
         Task<Response> DeleteAsync(T Entity);
         Task<T> FindByIdAsync(int Id);
         Task<IEnumerable<T>> GetAllAsync();
-        Task<Response> UpdateAsync(int Id, T Entity);
+        //Task<Response> UpdateAsync(int Id, T Entity);
 
 
 
