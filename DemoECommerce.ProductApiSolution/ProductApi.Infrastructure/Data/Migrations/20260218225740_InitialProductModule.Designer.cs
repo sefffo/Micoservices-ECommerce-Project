@@ -11,8 +11,8 @@ using ProductApi.Infrastructure.Data;
 namespace ProductApi.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ProductDbContext))]
-    [Migration("20260211172511_initial migration and Product Module")]
-    partial class initialmigrationandProductModule
+    [Migration("20260218225740_InitialProductModule")]
+    partial class InitialProductModule
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,6 +37,7 @@ namespace ProductApi.Infrastructure.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Quantity")
