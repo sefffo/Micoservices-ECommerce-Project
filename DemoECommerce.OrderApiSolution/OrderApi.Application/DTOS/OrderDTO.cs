@@ -4,7 +4,7 @@ namespace OrderApi.Application.DTOS
 {
     public record OrderDTO(
 
-        int id,
+        int Id,
         [Required, Range(1, int.MaxValue)] int ProductId,
         [Required, Range(1, int.MaxValue)] int ClientId,
         [Required, Range(1, int.MaxValue)] int PurchaseQuantity,
