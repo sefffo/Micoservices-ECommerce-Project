@@ -1,10 +1,10 @@
 # Visual Studio / VS Code
 .vs/
-*.sln.*
+
 *.user
 *.suo
 *.userosscache
-*.slnx
+
 
 # Build results
 [Dd]ebug/
